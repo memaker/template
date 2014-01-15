@@ -1,0 +1,11 @@
+
+<% unless current_page?(login_path) %>
+  <%= render 'layouts/header' %>
+<% end %>
+
+<%= yield %>
+
+<% unless current_page?(login_path) %>
+  <%= render 'layouts/footer' %>
+<% end %>
+

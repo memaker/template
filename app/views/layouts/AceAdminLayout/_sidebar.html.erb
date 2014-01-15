@@ -1,0 +1,148 @@
+<div id="sidebar">
+<div id="sidebar-shortcuts">
+  <div id="sidebar-shortcuts-large">
+    <button class="btn btn-small btn-success">
+      <i class="icon-signal"></i>
+    </button>
+
+    <button class="btn btn-small btn-info">
+      <i class="icon-pencil"></i>
+    </button>
+
+    <button class="btn btn-small btn-warning">
+      <i class="icon-group"></i>
+    </button>
+
+    <button class="btn btn-small btn-danger">
+      <i class="icon-cogs"></i>
+    </button>
+  </div>
+
+  <div id="sidebar-shortcuts-mini">
+    <span class="btn btn-success"></span>
+
+    <span class="btn btn-info"></span>
+
+    <span class="btn btn-warning"></span>
+
+    <span class="btn btn-danger"></span>
+  </div>
+</div><!--#sidebar-shortcuts-->
+
+<ul class="nav nav-list">
+  <li <%= active_page?(index_path) %>>
+    <%= link_to (raw('<i class="icon-dashboard"></i><span>Dashboard</span>')), index_path %>
+  </li>
+
+  <li <%= active_page?(typography_path) %>>
+    <%= link_to (raw('<i class="icon-text-width"></i><span>Typography</span>')), typography_path %>
+  </li>
+
+  <%= content_tag :li, :class => "#{active_menu?(current_page?(buttons_path) || current_page?(elements_path) || current_page?(treeview_path))}" do %>
+    <a href="#" class="dropdown-toggle">
+      <i class="icon-desktop"></i>
+      <span>UI Elements</span>
+
+      <b class="arrow icon-angle-down"></b>
+    </a>
+
+    <ul class="submenu">
+      <li <%= active_page?(elements_path) %>>
+          <%= link_to (raw('<i class="icon-double-angle-right"></i>Elements')), elements_path %>
+      </li>
+
+      <li <%= active_page?(buttons_path) %>>
+        <%= link_to (raw('<i class="icon-double-angle-right"></i>Buttons &amp; Icons')), buttons_path %>
+      </li>
+
+      <li <%= active_page?(treeview_path) %>>
+          <%= link_to (raw('<i class="icon-double-angle-right"></i>Treeview')), treeview_path %>
+      </li>
+    </ul>
+  <% end %>
+
+  <li <%= active_page?(tables_path) %>>
+    <%= link_to (raw('<i class="icon-list"></i><span>Tables</span>')), tables_path %>
+  </li>
+
+
+  <%= content_tag :li, :class => "#{active_menu?(current_page?(formelements_path) || current_page?(formwizard_path) || current_page?(wysiwyg_path))}" do %>
+    <a href="#" class="dropdown-toggle">
+      <i class="icon-edit"></i>
+      <span>Forms</span>
+
+      <b class="arrow icon-angle-down"></b>
+    </a>
+
+    <ul class="submenu">
+      <li <%= active_page?(formelements_path) %>>
+        <%= link_to (raw('<i class="icon-double-angle-right"></i>Form Elements')), formelements_path %>
+      </li>
+
+      <li <%= active_page?(formwizard_path) %>>
+        <%= link_to (raw('<i class="icon-double-angle-right"></i>Wizard & Validation')), formwizard_path %>
+      </li>
+
+      <li <%= active_page?(wysiwyg_path) %>>
+        <%= link_to (raw('<i class="icon-double-angle-right"></i>Wysiwyg & Markdown')), wysiwyg_path %>
+      </li>
+    </ul>
+  <% end %>
+
+  <li <%= active_page?(widgets_path) %>>
+      <%= link_to (raw('<i class="icon-list-alt"></i><span>Widgets</span>')), widgets_path %>
+  </li>
+
+  <li <%= active_page?(calendar_path) %>>
+    <%= link_to (raw('<i class="icon-calendar"></i><span>Calendar</span>')), calendar_path %>
+  </li>
+
+  <li <%= active_page?(gallery_path) %>>
+    <%= link_to (raw('<i class="icon-picture"></i><span>Gallery</span>')), gallery_path %>
+
+  </li>
+
+  <li <%= active_page?(grid_path) %>>
+    <%= link_to (raw('<i class="icon-th"></i><span>Grid</span>')), grid_path %>
+  </li>
+
+  <%= content_tag :li, :class => "#{active_menu?(current_page?(pricing_path) || current_page?(invoice_path) || current_page?(login_path) || current_page?(error404_path) || current_page?(error500_path) || current_page?(blank_path))}" do %>
+    <a href="#" class="dropdown-toggle">
+      <i class="icon-file"></i>
+      <span>Other Pages</span>
+
+      <b class="arrow icon-angle-down"></b>
+    </a>
+
+    <ul class="submenu">
+      <li <%= active_page?(pricing_path) %>>
+        <%= link_to (raw('<i class="icon-double-angle-right"></i>Pricing Tables')), pricing_path %>
+      </li>
+
+      <li <%= active_page?(invoice_path) %>>
+        <%= link_to (raw('<i class="icon-double-angle-right"></i>Invoice')), invoice_path %>
+      </li>
+
+      <li <%= active_page?(login_path) %>>
+        <%= link_to (raw('<i class="icon-double-angle-right"></i>Login & Register')), login_path %>
+      </li>
+
+      <li <%= active_page?(error404_path) %>>
+        <%= link_to (raw('<i class="icon-double-angle-right"></i>Error 404')), error404_path %>
+      </li>
+
+      <li <%= active_page?(error500_path) %>>
+        <%= link_to (raw('<i class="icon-double-angle-right"></i>Error 500')), error500_path %>
+      </li>
+
+      <li <%= active_page?(blank_path) %>>
+        <%= link_to (raw('<i class="icon-double-angle-right"></i>Blank Page')), blank_path %>
+      </li>
+    </ul>
+  <% end %>
+</ul><!--/.nav-list-->
+
+<div id="sidebar-collapse">
+  <i class="icon-double-angle-left"></i>
+</div>
+</div>

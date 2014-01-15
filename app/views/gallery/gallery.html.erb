@@ -1,0 +1,254 @@
+<% provide(:title, 'Gallery') %>
+<% provide(:page_header_description, 'responsive photo gallery using colorbox') %>
+
+<%= content_for :page_specific_stylesheets do %>
+  <%= stylesheet_link_tag 'colorbox' %>
+<% end %>
+
+<%= content_for :inline_stylesheets do %>
+  <%# ----------------------None---------------------- %>
+<% end %>
+
+
+<%# Page Contend - Start %>
+
+<div class="row-fluid">
+  <ul class="ace-thumbnails">
+    <li>
+      <%= link_to "assets/gallery/image-1.jpg", "title"=>"Photo Title", "data-rel"=>"colorbox" do %>
+        <%= image_tag "gallery/thumb-1.jpg", "alt"=>"150x150" %>
+        <div class="tags">
+          <span class="label label-info">breakfast</span>
+          <span class="label label-important">fruits</span>
+          <span class="label label-success">toast</span>
+          <span class="label label-warning arrowed-in">diet</span>
+        </div>
+      <% end %>
+
+      <div class="tools">
+        <a href="#">
+          <i class="icon-link"></i>
+        </a>
+
+        <a href="#">
+          <i class="icon-paper-clip"></i>
+        </a>
+
+        <a href="#">
+          <i class="icon-pencil"></i>
+        </a>
+
+        <a href="#">
+          <i class="icon-remove red"></i>
+        </a>
+      </div>
+    </li>
+
+    <li>
+      <%= link_to "assets/gallery/image-2.jpg", "data-rel"=>"colorbox" do %>
+        <%= image_tag "gallery/thumb-2.jpg", "alt"=>"150x150" %>
+        <div class="text">
+          <div class="inner">Sample Caption on Hover</div>
+        </div>
+      </a>
+      <% end %>
+    </li>
+
+    <li>
+      <%= link_to "assets/gallery/image-3.jpg", "data-rel"=>"colorbox" do %>
+        <%= image_tag "gallery/thumb-3.jpg", "alt"=>"150x150" %>
+        <div class="text">
+          <div class="inner">Sample Caption on Hover</div>
+        </div>
+      <% end %>
+
+      <div class="tools tools-bottom">
+        <a href="#">
+          <i class="icon-link"></i>
+        </a>
+
+        <a href="#">
+          <i class="icon-paper-clip"></i>
+        </a>
+
+        <a href="#">
+          <i class="icon-pencil"></i>
+        </a>
+
+        <a href="#">
+          <i class="icon-remove red"></i>
+        </a>
+      </div>
+    </li>
+
+    <li>
+      <%= link_to "assets/gallery/image-4.jpg", "data-rel"=>"colorbox" do %>
+        <%= image_tag "gallery/thumb-4.jpg", "alt"=>"150x150" %>
+        <div class="tags">
+          <span class="label label-info arrowed">fountain</span>
+          <span class="label label-important">recreation</span>
+        </div>
+      <% end %>
+
+      <div class="tools tools-top">
+        <a href="#">
+          <i class="icon-link"></i>
+        </a>
+
+        <a href="#">
+          <i class="icon-paper-clip"></i>
+        </a>
+
+        <a href="#">
+          <i class="icon-pencil"></i>
+        </a>
+
+        <a href="#">
+          <i class="icon-remove red"></i>
+        </a>
+      </div>
+    </li>
+
+    <li>
+      <div>
+
+        <%= image_tag "gallery/thumb-5.jpg", "alt"=>"150x150" %>
+        <div class="text">
+          <div class="inner">
+            <span>Some Title!</span>
+
+            <br />
+            <%= link_to "assets/gallery/image-5.jpg", "data-rel"=>"colorbox" do %>
+              <i class="icon-zoom-in"></i>
+            <% end %>
+
+            <a href="#">
+              <i class="icon-user"></i>
+            </a>
+
+            <a href="#">
+              <i class="icon-share-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <%= link_to "assets/gallery/image-6.jpg", "data-rel"=>"colorbox" do %>
+        <%= image_tag "gallery/thumb-6.jpg", "alt"=>"150x150" %>
+      <% end %>
+
+      <div class="tools tools-right">
+        <a href="#">
+          <i class="icon-link"></i>
+        </a>
+
+        <a href="#">
+          <i class="icon-paper-clip"></i>
+        </a>
+
+        <a href="#">
+          <i class="icon-pencil"></i>
+        </a>
+
+        <a href="#">
+          <i class="icon-remove red"></i>
+        </a>
+      </div>
+    </li>
+
+    <li>
+
+      <%= link_to "assets/gallery/image-1.jpg", "data-rel"=>"colorbox" do %>
+        <%= image_tag "gallery/thumb-1.jpg", "alt"=>"150x150" %>
+      <% end %>
+
+      <div class="tools">
+        <a href="#">
+          <i class="icon-link"></i>
+        </a>
+
+        <a href="#">
+          <i class="icon-paper-clip"></i>
+        </a>
+
+        <a href="#">
+          <i class="icon-pencil"></i>
+        </a>
+
+        <a href="#">
+          <i class="icon-remove red"></i>
+        </a>
+      </div>
+    </li>
+
+    <li>
+
+      <%= link_to "assets/gallery/image-2.jpg", "data-rel"=>"colorbox" do %>
+        <%= image_tag "gallery/thumb-2.jpg", "alt"=>"150x150" %>
+      <% end %>
+
+      <div class="tools tools-top">
+        <a href="#">
+          <i class="icon-link"></i>
+        </a>
+
+        <a href="#">
+          <i class="icon-paper-clip"></i>
+        </a>
+
+        <a href="#">
+          <i class="icon-pencil"></i>
+        </a>
+
+        <a href="#">
+          <i class="icon-remove red"></i>
+        </a>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<%# Page Contend - End %>
+
+<%= content_for :page_specific_javascripts do %>
+  <%= javascript_include_tag 'jquery.colorbox-min' %>
+<% end %>
+
+<% content_for :inline_javascripts do %>
+  <script type="text/javascript">
+    $(function() {
+      var colorbox_params = {
+        reposition:true,
+        scalePhotos:true,
+        scrolling:false,
+        previous:'<i class="icon-arrow-left"></i>',
+        next:'<i class="icon-arrow-right"></i>',
+        close:'&times;',
+        current:'{current} of {total}',
+        maxWidth:'100%',
+        maxHeight:'100%',
+        onOpen:function(){
+          document.body.style.overflow = 'hidden';
+        },
+        onClosed:function(){
+          document.body.style.overflow = 'auto';
+        },
+        onComplete:function(){
+          $.colorbox.resize();
+        }
+      };
+
+      $('.ace-thumbnails [data-rel="colorbox"]').colorbox(colorbox_params);
+      $("#cboxLoadingGraphic").append("<i class='icon-spinner orange'></i>");//let's add a custom loading icon
+
+      /**$(window).on('resize.colorbox', function() {
+		try {
+			//this function has been changed in recent versions of colorbox, so it won't work
+			$.fn.colorbox.load();//to redraw the current frame
+		} catch(e){}
+	});*/
+    })
+  </script>
+<% end %>
